@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col s20 m20">
+    <div class="card darken-1">
+      <div class="card-content white-black">
+        <span class="card-title">Students ntonton</span>
+        <!-- *************************************************** -->
+        <table class="responsive-table highlight">
+          <thead>
+            <tr>
+              <!-- <th>Id</th> -->
+              <th>Name</th>
+              <th>ID Num.</th>
+              <th>Email</th>
+              <th>Modules</th>
+              <th>Date Registered</th>
+              <th>Date Edited</th>
+              <th>Action</th>
+              <th></th>
+              <th> <a href=""><i class="material-icons">add</i></a></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let student of studentsService.students">
+              <td>{{ student.Name}}</td>
+              <td>{{ student.IDNumber}}</td>
+              <td>{{ student.Email}}</td>
+              <td>{{ student.Modules}}</td>
+              <td>{{ student.DateReg}}</td>
+              <td>{{ student.DateEdited}}</td>
+              <td>
+                <a href=""><i class="material-icons">visibility</i></a>
+              </td>
+              <td><a class="action-btn" >
+                 <i class="material-icons">edit</i>
+                </a>
+              </td>
+              <td>
+                <a class="action-btn">
+                  <i class="material-icons">delete</i>
+                </a>
+              </td>
+
+            </tr>
+          </tbody>
+        </table>
+
+
+
+
+        <!-- ************************************************ -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
