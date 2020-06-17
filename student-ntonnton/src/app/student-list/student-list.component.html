@@ -1,0 +1,24 @@
+
+<div class="col s6 m">
+  <h6 class="header">Student Details</h6>
+  <br>
+  <div class="card horizontal" style="width:50%">
+    <div class="card-stacked">
+      <div class="card-content">
+        <div *ngFor="let student of studentsService.students">
+          <p>Name : {{ student.Name}}</p>
+          <p>ID Number : {{ student.IDNumber}}</p>
+          <p>Email : {{ student.Email}}</p>
+          <p>Modules : {{ student.Modules}}</p>
+          <p>DateReg : {{ student.DateReg}}</p>
+          <p>DateEdited : {{ student.DateEdited}}</p>
+        </div>
+
+      </div>
+      <div class="card-action">
+      </div>
+    </div>
+  </div>
+
+</div>
+<input routerLink="/student" type="Submit" value="Back" class="btn btn-secondary">

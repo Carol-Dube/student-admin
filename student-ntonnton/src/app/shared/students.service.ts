@@ -29,6 +29,14 @@ export class StudentsService {
 
   }
 
+  getStudentsDlist(){
+    return this.http.get(this.url + '/5ee9308c462d65b2c08f4679');
+  }
+
+  deleteStudent(id){
+    return this.http.delete(this.url + '/' + id);
+  };
+
 
 
 }

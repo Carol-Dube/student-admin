@@ -1,8 +1,10 @@
+
 <div class="row">
   <div class="col s20 m20">
     <div class="card darken-1">
       <div class="card-content white-black">
         <span class="card-title">Students ntonton</span>
+        <br>
         <!-- *************************************************** -->
         <table class="responsive-table highlight">
           <thead>
@@ -16,7 +18,7 @@
               <th>Date Edited</th>
               <th>Action</th>
               <th></th>
-              <th> <a href=""><i class="material-icons">add</i></a></th>
+              <th><a (click)="onCreate()"><i class="material-icons">add</i></a></th>
             </tr>
           </thead>
           <tbody>
@@ -27,8 +29,12 @@
               <td>{{ student.Modules}}</td>
               <td>{{ student.DateReg}}</td>
               <td>{{ student.DateEdited}}</td>
+              <!-- <input [(ngModel)]="student.Name" #ctrl="ngModel" required> -->
+
               <td>
-                <a href=""><i class="material-icons">visibility</i></a>
+                <a routerLink="/student-list/{{student._id}}" [state]="student._id" class="nav-link" routerLinkActive="active">
+                  <i class="material-icons">visibility</i>
+                </a>
               </td>
               <td><a class="action-btn" >
                  <i class="material-icons">edit</i>
@@ -36,16 +42,12 @@
               </td>
               <td>
                 <a class="action-btn">
-                  <i class="material-icons">delete</i>
+                  <i class="material-icons" (click)="deleteAStudent(student._id)">delete</i>
                 </a>
               </td>
-
             </tr>
           </tbody>
         </table>
-
-
-
 
         <!-- ************************************************ -->
       </div>
@@ -53,4 +55,7 @@
     </div>
   </div>
 </div>
+
+
+
 
